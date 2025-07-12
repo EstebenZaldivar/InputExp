@@ -1,0 +1,4 @@
+.rebindButton:hover {
+    background-size: 102% 102%;
+    -unity-background-image-tint-color: rgb(255, 223, 1);
+}

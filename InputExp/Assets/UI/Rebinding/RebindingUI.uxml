@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Rebinding/ButtonRebinding.uss?fileID=7433441132597879392&amp;guid=991348c0247279a48a8c7efcf04d6a3b&amp;type=3#ButtonRebinding" />
+    <ui:VisualElement style="flex-grow: 1; align-items: center; justify-content: center; align-self: center; align-content: center; background-color: rgb(0, 0, 0); width: 1920px; height: 1080px;">
+        <ui:Label text="Rebind the jump button" name="RebindLabel" style="color: rgb(255, 255, 255); font-size: 24px;" />
+        <ui:Button text="Press to Rebind" name="RebindButton" class="Button" style="width: 220px; height: 50px; flex-direction: row; flex-wrap: wrap; font-size: 20px;" />
+    </ui:VisualElement>
+</ui:UXML>

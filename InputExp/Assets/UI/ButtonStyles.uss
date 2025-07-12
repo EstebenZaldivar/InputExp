@@ -1,0 +1,24 @@
+.inventoryButton {
+    background-color: rgba(255, 255, 255, 0);
+    transition-duration: 0.35s;
+    width: 220px;
+    height: 250px;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+}
+
+.inventoryButton:focus {
+    -unity-background-image-tint-color: rgb(0, 255, 33);
+    background-color: rgba(0, 255, 33, 0);
+    background-size: 65% 65%;
+    flex-grow: 0;
+    width: 220px;
+    height: 250px;
+    width: auto;
+    max-width: none;
+    -unity-text-outline-width: 0;
+    -unity-text-outline-color: rgba(0, 0, 0, 0);
+    scale: 1 1;
+}
