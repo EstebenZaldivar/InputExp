@@ -2007,6 +2007,7 @@ GameObject:
   - component: {fileID: 6982812147933622147}
   - component: {fileID: 6982812147933622149}
   - component: {fileID: 6982812147933622148}
+  - component: {fileID: 6982812147933622150}
   m_Layer: 8
   m_Name: PlayerArmature
   m_TagString: Player
@@ -2788,6 +2789,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &6982812147933622150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416926083347132227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03ffd6b87e686f14e85cd0a5780a8f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  WalkSpeed: 5
+  RotateSpeed: 50
+  JumpSpeed: 10
 --- !u!4 &6983258930626336602
 Transform:
   m_ObjectHideFlags: 0
