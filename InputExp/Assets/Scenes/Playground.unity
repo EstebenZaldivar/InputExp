@@ -2928,6 +2928,7 @@ MonoBehaviour:
   WalkSpeed: 5
   RotateSpeed: 35
   JumpSpeed: 10
+  PauseDisplay: {fileID: 1717819046305233499}
 --- !u!4 &6983258930626336602
 Transform:
   m_ObjectHideFlags: 0

@@ -8,6 +8,8 @@ public class PlayerWalk : MonoBehaviour
     private InputAction m_moveAction;
     private InputAction m_lookAction;
     private InputAction m_jumpAction;
+    private InputAction m_pauseActionPlayer;
+    private InputAction m_pauseActionUI;
 
     private Vector2 m_moveAmt;
     private Vector2 m_lookAmt;
@@ -17,6 +19,8 @@ public class PlayerWalk : MonoBehaviour
     public float WalkSpeed = 5;
     public float RotateSpeed = 5;
     public float JumpSpeed = 5;
+
+    public GameObject PauseDisplay;
 
     private void OnEnable()
     {
@@ -34,6 +38,9 @@ public class PlayerWalk : MonoBehaviour
         m_lookAction = InputSystem.actions.FindAction("Look");
         m_jumpAction = InputSystem.actions.FindAction("Jump");
 
+        m_pauseActionPlayer = InputSystem.actions.FindAction("Player/Pause");
+        m_pauseActionUI = InputSystem.actions.FindAction("UI/Pause");
+
         m_animator = GetComponent<Animator>();
         m_rigidbody = GetComponent<Rigidbody>();
 
@@ -50,6 +57,24 @@ public class PlayerWalk : MonoBehaviour
             Jump();
         }
 
+        DisplayPause();
+
+    }
+
+    private void DisplayPause()
+    {
+        if (m_pauseActionPlayer.WasPressedThisFrame())
+        {
+            PauseDisplay.SetActive(true);
+            InputActions.FindActionMap("Player").Disable();
+            InputActions.FindActionMap("UI").Enable();
+        }
+        else if (m_pauseActionUI.WasPressedThisFrame())
+        {
+            PauseDisplay.SetActive(false);
+            InputActions.FindActionMap("UI").Disable();
+            InputActions.FindActionMap("Player").Enable();
+        }
     }
 
     public void Jump()
