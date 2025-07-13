@@ -2926,7 +2926,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   WalkSpeed: 5
-  RotateSpeed: 50
+  RotateSpeed: 35
   JumpSpeed: 10
 --- !u!4 &6983258930626336602
 Transform:

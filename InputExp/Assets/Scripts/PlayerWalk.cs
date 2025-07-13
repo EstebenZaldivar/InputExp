@@ -67,24 +67,26 @@ public class PlayerWalk : MonoBehaviour
 
     private void Walking()
     {
-        m_animator.SetFloat("Speed", m_moveAmt.y);
-        m_rigidbody.MovePosition(m_rigidbody.position + transform.forward * m_moveAmt.y * WalkSpeed * Time.deltaTime);
+        // Move only forward/backward relative to the player's facing direction
+        Vector3 moveDirection = transform.forward * m_moveAmt.y;
+
+        // Move the player
+        m_rigidbody.MovePosition(m_rigidbody.position + moveDirection * WalkSpeed * Time.deltaTime);
+
+        // Set speed in animator based only on forward/backward movement
+        m_animator.SetFloat("Speed", Mathf.Abs(m_moveAmt.y));
     }
+
 
     private void Rotating()
     {
-        if (m_moveAmt.y != 0)
+        if (Mathf.Abs(m_lookAmt.x) > 0.01f) // Optional: Only rotate if there's actual look input
         {
             float rotationAmount = m_lookAmt.x * RotateSpeed * Time.deltaTime;
             Quaternion deltaRotation = Quaternion.Euler(0, rotationAmount, 0);
             m_rigidbody.MoveRotation(m_rigidbody.rotation * deltaRotation);
-            Debug.Log("Running");
         }
-
     }
-
-
-
 
 
 }
